@@ -1,0 +1,22 @@
+- id: luz_por_movimiento_on
+  alias: "Luz: encender por movimiento"
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.sensor_movimiento
+      to: "on"
+  action:
+    - service: light.turn_on
+      target:
+        entity_id: light.bombilla
+
+- id: luz_por_movimiento_off_30s
+  alias: "Luz: apagar 30s sin movimiento"
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.sensor_movimiento
+      to: "off"
+      for: "00:00:30"
+  action:
+    - service: light.turn_off
+      target:
+        entity_id: light.bombilla
