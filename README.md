@@ -2,14 +2,14 @@
 
 Este archivo documenta la configuración lógica para el control automático de iluminación en Home Assistant. El sistema utiliza un sensor de movimiento para gestionar el estado de la bombilla, optimizando el consumo energético.
 
-## 📋 Descripción del Flujo
+## Descripción del Flujo
 
 El sistema funciona mediante dos automatizaciones complementarias:
 
-1.  **Activación (ON):** * **Disparador:** El sensor detecta movimiento (pasa a estado `on`).
+1.  **Activación (ON):**  **Disparador:** El sensor detecta movimiento (pasa a estado `on`).
     * **Acción:** Enciende la luz inmediatamente.
 
-2.  **Desactivación (OFF):** * **Disparador:** El sensor deja de detectar movimiento (estado `off`) y mantiene este estado durante **30 segundos**.
+2.  **Desactivación (OFF):**  **Disparador:** El sensor deja de detectar movimiento (estado `off`) y mantiene este estado durante **30 segundos**.
     * **Acción:** Apaga la luz automáticamente.
 
 ## Entidades Utilizadas
